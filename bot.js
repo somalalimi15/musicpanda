@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client(); 
-const prefix = 'PH'
+const prefix = '*'
 /////
 /////  
 /////
@@ -44,7 +44,7 @@ client.user.setGame(`- Panda H , Music🎸 '`,"http://twitch.tv/Mohamed192837465
 /////
 /////
 client.on('message', message => {
-    if (message.content === 'HHelp') {
+    if (message.content === '*Help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .addField('**__Play__**', '**لتشغيل اغنية**')
@@ -64,7 +64,7 @@ client.on('message', message => {
 /////
 client.on('message', message => {
                                 if(!message.channel.guild) return;
-                        if (message.content.startsWith('ping')) {
+                        if (message.content.startsWith('*ping')) {
                             if(!message.channel.guild) return;
                             var msg = `${Date.now() - message.createdTimestamp}`
                             var api = `${Math.round(client.ping)}`
@@ -81,7 +81,7 @@ client.on('message', message => {
 /////
 
 const adminprefix = "$";
-const devs = ['368768446327947265,481890802788859924'];
+const devs = ['368768446327947265'];
 
 client.on('message', message => {
 if(message.content === adminprefix + "restart") {
